@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import mlflow
+import os
 import pandas as pd
 
 from sklearn.metrics import (
@@ -93,6 +94,12 @@ with mlflow.start_run():
     )
 
     print(f"Skor Akurasi: {accuracy}")
+
+    # ==========================================
+    # ARTIFACTS DIRECTORY
+    # ==========================================
+
+    os.makedirs("artifacts/auto", exist_ok=True)
 
     # ==========================================
     # CONFUSION MATRIX

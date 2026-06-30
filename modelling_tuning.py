@@ -2,6 +2,7 @@ import dagshub
 import matplotlib.pyplot as plt
 import mlflow
 import optuna
+import os
 import pandas as pd
 
 from sklearn.metrics import (
@@ -194,6 +195,12 @@ with mlflow.start_run():
         "accuracy",
         accuracy
     )
+
+    # ==========================================
+    # ARTIFACTS DIRECTORY
+    # ==========================================
+
+    os.makedirs("artifacts/manual", exist_ok=True)
 
     # ======================================
     # CONFUSION MATRIX
