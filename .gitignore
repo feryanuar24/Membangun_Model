@@ -1,0 +1,4 @@
+/artifacts/auto/*
+/artifacts/manual/*
+/mlartifacts
+/mlruns
